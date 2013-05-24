@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/marjoripomarole/halpzme/.git'
+let g:netrw_dirhist_2='/Users/marjoripomarole/bitcoin_anonymity/src/sarah_utils/services'
+let g:netrw_dirhist_3='/Users/marjoripomarole/.node-gyp'
+let g:netrw_dirhist_4='/Users/marjoripomarole/bitcoin_anonymity/.svn'
+let g:netrw_dirhist_5='/var/pgsql_socket_alt'
+let g:netrw_dirhist_6='/Users/marjoripomarole/doo'
