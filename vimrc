@@ -23,10 +23,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-execute pathogen#infect()
-filetype plugin indent on
-
 " Looks
-set background=light
+set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
