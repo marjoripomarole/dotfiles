@@ -51,5 +51,3 @@ alias nuke='pkill -u $(whoami)'
 
 #Colorize the Terminal
 export CLICOLOR=1;
-
-alias ssh='TERM=xterm ssh'
