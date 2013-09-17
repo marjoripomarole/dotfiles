@@ -1,6 +1,6 @@
 # For PostgreSQL
 # Aliases
-alias v=vim
+alias v='vim'
 alias gvim='mvim'
 alias g='mvim'
 alias 1='cd -'
@@ -51,3 +51,7 @@ alias nuke='pkill -u $(whoami)'
 
 #Colorize the Terminal
 export CLICOLOR=1;
+
+# dir shortcuts
+alias atados='cd ~/projects/atados'
+alias Downloads='cd ~/Downloads'
