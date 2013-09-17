@@ -1,4 +1,4 @@
-syntax enable
+
 syntax on
 filetype plugin on  " for eclim
 set nocompatible    " get rid of strict vi compatibility!
@@ -27,6 +27,11 @@ execute pathogen#infect()
 filetype plugin indent on
 
 " Looks
-set background=light
+set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+
+"TODO:
+    "- Find plugin for searching file easily
+    "- Install tmux and set up just like it was before
+    "- INSTALL THE COLOR plugin for bash
