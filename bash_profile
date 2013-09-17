@@ -55,3 +55,10 @@ export CLICOLOR=1;
 # dir shortcuts
 alias atados='cd ~/projects/atados'
 alias Downloads='cd ~/Downloads'
+
+# open tmux automatically
+if [[ "$TERM" != "screen-256color" ]]
+then
+    tmux attach-session -t "$USER" || tmux new-session -s "$USER"
+    exit
+fi
