@@ -1,6 +1,4 @@
 # For PostgreSQL
-export PATH=/usr/local/bin:$PATH
-
 # Aliases
 alias v=vim
 alias gvim='mvim'
@@ -53,6 +51,3 @@ alias nuke='pkill -u $(whoami)'
 
 #Colorize the Terminal
 export CLICOLOR=1;
-
-#Homebrew Tab completion
-source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
