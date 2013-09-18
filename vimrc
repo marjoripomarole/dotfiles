@@ -27,12 +27,8 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
-"autocmd FileType python set omnifunc=pythoncomplete#Complete
-"autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-"autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-"autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-
-" Syntastic, ect
+" Easy install of plugins for vim
 execute pathogen#infect()
 
-" TODO Find plugin for searching file easily
+" Ctrl-p
+set runtimepath^=~/.vim/bundle/ctrlp.vim
