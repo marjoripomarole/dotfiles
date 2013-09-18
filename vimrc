@@ -1,6 +1,5 @@
-
 syntax on
-filetype plugin on  " for eclim
+
 set nocompatible    " get rid of strict vi compatibility!
 set nu              " line numbering on
 set autoindent      " autoindent on
@@ -17,18 +16,23 @@ set nojoinspaces    " don't add white space when I don't tell you to
 set ruler           " which line am I on?
 set showmatch       " ensure Dyck language
 set incsearch       " incremental searching
-set hlsearch        " meh
+set hlsearch
+
 set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-" Looks
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
-"TODO:
-    "- Find plugin for searching file easily
-    "- Install tmux and set up just like it was before
-    "- INSTALL THE COLOR plugin for bash
+"autocmd FileType python set omnifunc=pythoncomplete#Complete
+"autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+"autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+"autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+" Syntastic, ect
+execute pathogen#infect()
+
+" TODO Find plugin for searching file easily

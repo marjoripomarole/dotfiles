@@ -441,6 +441,4 @@ endfunction
 "  endtry
 "endfunction
 
-
-" vim:set et sts=2 sw=2:
-
+# vim: ai ts=4 sts=4 et sw=4
