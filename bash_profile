@@ -1,5 +1,6 @@
-# For PostgreSQL
-# Aliases
+# Made by Marjori Pomarole
+
+# Random Aliases
 alias v='vim'
 alias gvim='mvim'
 alias g='mvim'
@@ -20,45 +21,45 @@ alias cd...='cd ../..'
 alias cd....='cd ../../..'
 alias cd.....='cd ../../../..'
 alias d='dirs -v'
+alias ll='ls -alsh'
+alias grep='grep --color=auto'
+alias unigrep='grep -P "[^\x00-\x7F]"'
+alias nuke='pkill -u $(whoami)'
+alias sb='source ~/.bash_profile'
+
+# Git land
 alias g=git
+alias gst='git status --short --untracked-files=no'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
+alias gcam='git commit -v -a -m'
 alias gco='git checkout'
 alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 alias gd='git diff'
 alias gdv='git diff -w "$@" | vim -R -'
-alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
-alias ggpull='git pull origin $(current_branch)'
-alias ggpush='git push origin $(current_branch)'
-alias gist='nocorrect gist'
 alias gl='git pull'
 alias glg='git log --stat --max-count=5'
 alias gp='git push'
-alias gst='git status'
 alias gup='git fetch && git rebase'
 alias glol='git log --oneline --graph --all --decorate' 
-alias ll='ls -alsh'
-alias lll='ls -alsh'
-alias dash='cd ~/bitcoin_anonymity/src/dashboard'
-
-alias grep='grep --color=auto'
-alias unigrep='grep -P "[^\x00-\x7F]"'
-
-alias nuke='pkill -u $(whoami)'
-
-#Colorize the Terminal
-export CLICOLOR=1;
 
 # dir shortcuts
 alias atados='cd ~/projects/atados'
+alias dotfiles='cd ~/dotfiles'
 alias Downloads='cd ~/Downloads'
 
-# open tmux automatically
+# Colorize the Terminal
+export CLICOLOR=1;
+
+# Open tmux automatically
 if [[ "$TERM" != "screen-256color" ]]
 then
     tmux attach-session -t "$USER" || tmux new-session -s "$USER"
     exit
 fi
+
+# As recommended by 'brew doctor', /usr/local/bin occurs before /usr/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
