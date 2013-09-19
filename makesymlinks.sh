@@ -8,8 +8,10 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
+
+# list of files/folders to symlink in homedir
 # not using zshrc oh-my-zhs private scrotwm.conf Xresources
-files="bashrc bash_profile vimrc vim tmux.conf"    # list of files/folders to symlink in homedir
+files="bashrc bash_profile vimrc vim tmux.conf git-completion.bash"    
 
 ##########
 

@@ -63,3 +63,8 @@ fi
 
 # As recommended by 'brew doctor', /usr/local/bin occurs before /usr/bin
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+
+# http://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
