@@ -44,7 +44,7 @@ alias gl='git pull'
 alias glg='git log --stat --max-count=5'
 alias gp='git push'
 alias gup='git fetch && git rebase'
-alias glol='git log --oneline --graph --all --decorate' 
+alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --date=short' 
 
 # dir shortcuts
 alias atados='cd ~/projects/atados'
