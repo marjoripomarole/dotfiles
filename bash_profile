@@ -26,6 +26,7 @@ alias grep='grep --color=auto'
 alias unigrep='grep -P "[^\x00-\x7F]"'
 alias nuke='pkill -u $(whoami)'
 alias sb='source ~/.bash_profile'
+alias myip='ifconfig |grep inet'
 
 # Git land
 alias g=git
@@ -54,13 +55,6 @@ alias Downloads='cd ~/Downloads'
 # Colorize the Terminal
 export CLICOLOR=1;
 
-# Open tmux automatically
-if [[ "$TERM" != "screen-256color" ]]
-then
-    tmux attach-session -t "$USER" || tmux new-session -s "$USER"
-    exit
-fi
-
 # As recommended by 'brew doctor', /usr/local/bin occurs before /usr/bin
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 
@@ -68,3 +62,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/projects
+source /usr/local/bin/virtualenvwrapper.sh
