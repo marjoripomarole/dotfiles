@@ -2,6 +2,9 @@
 	email = marjoripomarole@gmail.com
 	name = Marjori Pomarole
 
+[core]
+  editor = vim
+
 [color]
     diff = auto
     status = auto
