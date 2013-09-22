@@ -81,5 +81,7 @@ export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.14.001/libexec"
 export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
 export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
 
-export PS1="\u@\h\w$ "
 export EDITOR=vim
+export GIT_EDITOR=vim
+export PS1="\u@\h\w$ "
+export VISUAL=vim
