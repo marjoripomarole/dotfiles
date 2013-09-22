@@ -85,3 +85,29 @@ export EDITOR=vim
 export GIT_EDITOR=vim
 export PS1="\u@\h\w$ "
 export VISUAL=vim
+
+# Open a man page in Preview:
+pman () {
+    man -t "${1}" | open -f -a /Applications/Preview.app
+}
+
+# Quit an OS X application from the command line
+quit () {
+    for app in $*; do
+        osascript -e 'quit app "'$app'"'
+    done
+}
+
+# Relaunch an app
+relaunch () {
+    for app in $*; do
+        osascript -e 'quit app "'$app'"';
+        sleep 2;
+        open -a $app
+    done
+}
+
+# Uninstall an app with AppZapper from the command line:
+zap () {
+    open -a AppZapper /Applications/"${1}".app
+}
