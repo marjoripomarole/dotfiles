@@ -30,7 +30,7 @@ alias myip='ifconfig |grep inet'
 
 # Git land
 alias g=git
-alias gst='git status --short --untracked-files=no'
+alias gst='git status -b --short'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gc='git commit -v'
