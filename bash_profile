@@ -1,5 +1,9 @@
 # Made by Marjori Pomarole
 
+# virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/projects
+
 # Random Aliases
 alias v='vim'
 alias gvim='mvim'
@@ -48,7 +52,7 @@ alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --date=short' 
 
 # dir shortcuts
-alias atados='cd ~/projects/atados'
+alias atados='deactivate; workon atados; cd ~/projects/atados'
 alias dotfiles='cd ~/dotfiles'
 alias Downloads='cd ~/Downloads'
 
@@ -56,7 +60,7 @@ alias Downloads='cd ~/Downloads'
 export CLICOLOR=1;
 
 # As recommended by 'brew doctor', /usr/local/bin occurs before /usr/bin
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
 
 # http://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line
 if [ -f ~/.git-completion.bash ]; then
@@ -66,11 +70,6 @@ fi
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi 
-
-# virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/projects
-source /usr/local/bin/virtualenvwrapper.sh
 
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
