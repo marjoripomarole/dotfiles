@@ -1,8 +1,13 @@
 # Made by Marjori Pomarole
 
+export PS1="\u@\h\w$ "
+
+export PATH=/usr/local/sbin:/usr/local/bin:$PATH
+
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Random Aliases
 alias v='vim'
@@ -52,15 +57,12 @@ alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --date=short' 
 
 # dir shortcuts
-alias atados='deactivate; workon atados; cd ~/projects/atados'
+alias atados='deactivate; workon atados; cd ~/projects/atados/atados'
 alias dotfiles='cd ~/dotfiles'
 alias Downloads='cd ~/Downloads'
 
 # Colorize the Terminal
 export CLICOLOR=1;
-
-# As recommended by 'brew doctor', /usr/local/bin occurs before /usr/bin
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
 
 # http://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line
 if [ -f ~/.git-completion.bash ]; then
@@ -82,7 +84,6 @@ export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
 
 export EDITOR=vim
 export GIT_EDITOR=vim
-export PS1="\u@\h\w$ "
 export VISUAL=vim
 
 # Open a man page in Preview:
@@ -110,3 +111,5 @@ relaunch () {
 zap () {
     open -a AppZapper /Applications/"${1}".app
 }
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

@@ -35,3 +35,6 @@ execute pathogen#infect()
 
 " Ctrl-p
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" Angular syntax in html
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
