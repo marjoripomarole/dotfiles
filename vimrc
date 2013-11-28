@@ -2,8 +2,7 @@ syntax on
 
 " make sure vim uses file-specific indentions
 filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 set nocompatible    " get rid of strict vi compatibility!
 set nu              " line numbering on
@@ -26,7 +25,7 @@ set hlsearch
 set expandtab
 set shiftwidth=2 tabstop=2 softtabstop=2
 
-set background=dark
+set background=light
 let g:solarized_termcolors=256
 colorscheme solarized
 

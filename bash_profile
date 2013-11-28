@@ -10,6 +10,7 @@ export PROJECT_HOME=$HOME/projects
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Random Aliases
+alias tunnel='localtunnel -k ~/.ssh/id_rsa.pub 9000'
 alias v='vim'
 alias gvim='mvim'
 alias g='mvim'
@@ -35,6 +36,8 @@ alias grep='grep --color=auto'
 alias unigrep='grep -P "[^\x00-\x7F]"'
 alias nuke='pkill -u $(whoami)'
 alias sb='source ~/.bash_profile'
+alias b='vim ~/.bash_profile'
+alias up='brew update && brew upgrade'
 alias myip='ifconfig |grep inet'
 
 # Git land
@@ -58,8 +61,11 @@ alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --dat
 
 # dir shortcuts
 alias atados='deactivate; workon atados; cd ~/projects/atados/atados'
+alias www='deactivate; workon atados; cd ~/projects/atados/www'
 alias dotfiles='cd ~/dotfiles'
 alias Downloads='cd ~/Downloads'
+
+alias deployaws='git subtree push --prefix dist origin aws'
 
 # Colorize the Terminal
 export CLICOLOR=1;
