@@ -37,6 +37,7 @@ alias unigrep='grep -P "[^\x00-\x7F]"'
 alias nuke='pkill -u $(whoami)'
 alias sb='source ~/.bash_profile'
 alias b='vim ~/.bash_profile'
+alias atadosenv='vim ~/.virtualenvs/atados/bin/activate'
 alias up='brew update && brew upgrade'
 alias myip='ifconfig |grep inet'
 
@@ -47,7 +48,7 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
-alias gcam='git commit -v -a -m'
+alias gcam='git add --all; git commit --all -v -m'
 alias gco='git checkout'
 alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
@@ -61,11 +62,14 @@ alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --dat
 
 # dir shortcuts
 alias atados='deactivate; workon atados; cd ~/projects/atados/atados'
+alias migration='deactivate; workon atados; cd ~/projects/atados/atados-migration'
 alias www='deactivate; workon atados; cd ~/projects/atados/www'
 alias dotfiles='cd ~/dotfiles'
 alias Downloads='cd ~/Downloads'
+alias rebuildDB='dropdb atados; createdb atados; ../atados/manage.py syncdb --noinput; ../atados/manage.py migrate; make migrate'
 
 alias deployaws='git subtree push --prefix dist origin aws'
+alias deploy='git push; deployaws'
 
 # Colorize the Terminal
 export CLICOLOR=1;
