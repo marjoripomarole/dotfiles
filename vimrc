@@ -3,6 +3,8 @@ syntax on
 " make sure vim uses file-specific indentions
 filetype on
 filetype plugin indent on
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 set nocompatible    " get rid of strict vi compatibility!
 set nu              " line numbering on
@@ -37,3 +39,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " Angular syntax in html
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
+let g:pep8_map='<leader>8'
+let g:pyflakes_use_quickfix = 0

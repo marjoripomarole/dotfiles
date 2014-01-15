@@ -66,10 +66,11 @@ alias migration='deactivate; workon atados; cd ~/projects/atados/atados-migratio
 alias www='deactivate; workon atados; cd ~/projects/atados/www'
 alias dotfiles='cd ~/dotfiles'
 alias Downloads='cd ~/Downloads'
-alias rebuildDB='dropdb atados; createdb atados; ../atados/manage.py syncdb --noinput; ../atados/manage.py migrate; make migrate'
+alias rebuildDB='killall PG\ Commander; dropdb atados; createdb atados; ./manage.py syncdb --noinput; ./manage.py migrate; make migrate'
 
 alias deployaws='git subtree push --prefix dist origin aws'
 alias deploy='git push; deployaws'
+alias updatedump='psql -f atados.sql --host=atadosdb.cnpn2qkpvnvn.sa-east-1.rds.amazonaws.com --port=5432  --username=atadosdb --password --dbname=atadosdb'
 
 # Colorize the Terminal
 export CLICOLOR=1;
