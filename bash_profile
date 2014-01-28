@@ -65,7 +65,7 @@ alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --dat
 alias atados='deactivate; workon atados; cd ~/projects/atados/atados'
 alias migration='deactivate; workon atados; cd ~/projects/atados/atados-migration'
 alias www='deactivate; workon atados; cd ~/projects/atados/www'
-alias gastromotiva='deactivate; cd ~/projects/atados/www'
+alias gastromotiva='deactivate; cd ~/projects/gastromotiva'
 alias dotfiles='cd ~/dotfiles'
 alias Downloads='cd ~/Downloads'
 alias rebuildDB='killall PG\ Commander; dropdb atados; createdb atados; ./manage.py syncdb --noinput; ./manage.py migrate; make migrate'
