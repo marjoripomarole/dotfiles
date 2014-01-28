@@ -4,6 +4,7 @@ export PS1="\u@\h\w$ "
 
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 
+export GITHUBUSERNAME=mpomarole
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
@@ -64,6 +65,7 @@ alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --dat
 alias atados='deactivate; workon atados; cd ~/projects/atados/atados'
 alias migration='deactivate; workon atados; cd ~/projects/atados/atados-migration'
 alias www='deactivate; workon atados; cd ~/projects/atados/www'
+alias gastromotiva='deactivate; cd ~/projects/atados/www'
 alias dotfiles='cd ~/dotfiles'
 alias Downloads='cd ~/Downloads'
 alias rebuildDB='killall PG\ Commander; dropdb atados; createdb atados; ./manage.py syncdb --noinput; ./manage.py migrate; make migrate'

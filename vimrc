@@ -27,7 +27,7 @@ set hlsearch
 set expandtab
 set shiftwidth=2 tabstop=2 softtabstop=2
 
-set background=dark
+set background=light
 let g:solarized_termcolors=256
 colorscheme solarized
 
