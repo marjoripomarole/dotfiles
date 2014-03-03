@@ -39,11 +39,13 @@ alias nuke='pkill -u $(whoami)'
 alias sb='source ~/.bash_profile'
 alias b='vim ~/.bash_profile'
 alias atadosenv='vim ~/.virtualenvs/atados/bin/activate'
+alias celeryatados='celery -A atados_core worker --loglevel=info'
 alias up='brew update && brew upgrade'
 alias myip='ifconfig |grep inet'
 alias du='du -ch'
 alias untar='tar xvf'
 alias pid='ps -el | head -1 && ps -el | grep $1'
+alias prolog='swipl'
 
 # Git land
 alias g=git
