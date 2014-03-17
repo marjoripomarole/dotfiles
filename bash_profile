@@ -71,7 +71,7 @@ alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --dat
 alias atados='deactivate; workon atados; cd ~/projects/atados/atados'
 alias migration='deactivate; workon atados; cd ~/projects/atados/atados-migration'
 alias www='deactivate; workon atados; cd ~/projects/atados/www'
-alias gastromotiva='deactivate; cd ~/projects/gastromotiva'
+alias gastromotiva='deactivate; cd ~/projects/Gastromotiva/gastromotiva.org'
 alias dotfiles='cd ~/dotfiles'
 alias Downloads='cd ~/Downloads'
 alias rebuildDB='killall PG\ Commander; dropdb atados; createdb atados; ./manage.py syncdb --noinput; ./manage.py migrate; make migrate'
@@ -94,6 +94,7 @@ fi
 
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
+export SWI_HOME_DIR="/Users/marjoripomarole/Google\ Drive/USP/2014_01/AI/prolog/"
 export AWS_CREDENTIAL_FILE=$HOME/.elasticbeanstalk/aws_credential_file
 export AWS_ELASTICACHE_HOME="/usr/local/Cellar/aws-elasticache/1.7.000/libexec"
 export AWS_IAM_HOME="/usr/local/opt/aws-iam-tools/jars"
