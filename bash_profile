@@ -94,6 +94,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi 
 
 export JAVA_HOME="$(/usr/libexec/java_home)"
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec"
 
 export SWI_HOME_DIR="/Users/marjoripomarole/Google\ Drive/USP/2014_01/AI/prolog/"
 export AWS_CREDENTIAL_FILE=$HOME/.elasticbeanstalk/aws_credential_file
