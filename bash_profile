@@ -68,30 +68,16 @@ alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --date=short' 
 
 # dir shortcuts
-alias atados='deactivate; workon atados; cd ~/projects/atados/atados'
-alias migration='deactivate; workon atados; cd ~/projects/atados/atados-migration'
+alias api='deactivate; workon atados; cd ~/projects/atados/api'
 alias www='deactivate; workon atados; cd ~/projects/atados/www'
 alias porto='deactivate; workon atados; cd ~/projects/atados/porto'
+alias migration='deactivate; workon atados; cd ~/projects/atados/migration'
 alias gastromotiva='deactivate; cd ~/projects/Gastromotiva/gastromotiva.org'
 alias dotfiles='cd ~/dotfiles'
 alias Downloads='cd ~/Downloads'
-alias rebuildDB='killall PG\ Commander; dropdb atados; createdb atados; ./manage.py syncdb --noinput; ./manage.py migrate; make migrate'
-
-alias deployaws='git subtree push --prefix dist origin aws'
-alias deploy='git push; deployaws'
-alias updatedump='psql -f atados.sql --host=atadosdb.cnpn2qkpvnvn.sa-east-1.rds.amazonaws.com --port=5432  --username=atadosdb --password --dbname=atadosdb'
 
 # Colorize the Terminal
 export CLICOLOR=1;
-
-# http://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
-
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi 
 
 export JAVA_HOME="$(/usr/libexec/java_home)"
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec"
@@ -107,6 +93,15 @@ export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
 export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
+
+# http://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi 
 
 # Open a man page in Preview:
 pman () {
