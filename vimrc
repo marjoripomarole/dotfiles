@@ -24,8 +24,12 @@ set showmatch       " ensure Dyck language
 set incsearch       " incremental searching
 set hlsearch
 
+set backspace=indent,eol,start
+
 set expandtab
-set shiftwidth=2 tabstop=2 softtabstop=2
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 
 set background=dark
 let g:solarized_termcolors=256
@@ -36,7 +40,7 @@ execute pathogen#infect()
 
 " Ctrl-p
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/dist/*,*/bower_components/*,*/node_modules/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/dist/*,*/bower_components/*,*/node_modules/*,*.pyc
 
 " Angular syntax in html
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]

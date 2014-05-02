@@ -2,12 +2,11 @@
 
 export PS1="\u@\h\w$ "
 
-export PATH=/usr/local/sbin:/usr/local/bin:$PATH
-
 export GITHUBUSERNAME=mpomarole
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Random Aliases
@@ -83,7 +82,8 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec"
 
 export SWI_HOME_DIR="/Users/marjoripomarole/Google\ Drive/USP/2014_01/AI/prolog/"
-export AWS_CREDENTIAL_FILE=$HOME/.elasticbeanstalk/aws_credential_file
+
+export AWS_CREDENTIAL_FILE="/Users/marjoripomarole/.aws/config"
 export AWS_ELASTICACHE_HOME="/usr/local/Cellar/aws-elasticache/1.7.000/libexec"
 export AWS_IAM_HOME="/usr/local/opt/aws-iam-tools/jars"
 export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.14.001/libexec" 
