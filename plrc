@@ -1,0 +1,2 @@
+:- initialization(cd).
+:- use_module(library(clpfd)).
