@@ -67,13 +67,14 @@ alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --date=short' 
 
 # dir shortcuts
-alias api='deactivate; workon atados; cd ~/projects/atados/api'
-alias www='deactivate; workon atados; cd ~/projects/atados/www'
-alias porto='deactivate; workon atados; cd ~/projects/atados/porto'
+alias api='deactivate; workon api; cd ~/projects/atados/api'
+alias www='deactivate; cd ~/projects/atados/www'
+alias porto='deactivate; cd ~/projects/atados/porto'
 alias migration='deactivate; workon atados; cd ~/projects/atados/migration'
 alias gastromotiva='deactivate; cd ~/projects/Gastromotiva/gastromotiva.org'
 alias dotfiles='cd ~/dotfiles'
 alias Downloads='cd ~/Downloads'
+alias wplogs='cd /Applications/MAMP/logs/'
 
 # Colorize the Terminal
 export CLICOLOR=1;
@@ -130,3 +131,4 @@ zap () {
 }
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH=/usr/local/bin:$PATH
