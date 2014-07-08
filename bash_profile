@@ -68,8 +68,8 @@ alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --dat
 
 # dir shortcuts
 alias api='deactivate; workon api; cd ~/projects/atados/api'
-alias www='deactivate; cd ~/projects/atados/www'
-alias porto='deactivate; cd ~/projects/atados/porto'
+alias www=' deactivate; workon api; cd ~/projects/atados/www'
+alias porto='deactivate; workon api; cd ~/projects/atados/porto'
 alias migration='deactivate; workon atados; cd ~/projects/atados/migration'
 alias gastromotiva='deactivate; cd ~/projects/Gastromotiva/gastromotiva.org'
 alias dotfiles='cd ~/dotfiles'
