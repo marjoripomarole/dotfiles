@@ -67,9 +67,9 @@ alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --date=short' 
 
 # dir shortcuts
-alias api='deactivate; workon api; cd ~/projects/atados/api'
-alias www=' deactivate; workon api; cd ~/projects/atados/www'
-alias porto='deactivate; workon api; cd ~/projects/atados/porto'
+alias api='deactivate; workon atados; cd ~/projects/atados/api'
+alias www=' deactivate; workon atados; cd ~/projects/atados/www'
+alias porto='deactivate; workon atado
 alias migration='deactivate; workon atados; cd ~/projects/atados/migration'
 alias gastromotiva='deactivate; cd ~/projects/Gastromotiva/gastromotiva.org'
 alias dotfiles='cd ~/dotfiles'
@@ -80,7 +80,6 @@ alias wplogs='cd /Applications/MAMP/logs/'
 export CLICOLOR=1;
 
 export JAVA_HOME="$(/usr/libexec/java_home)"
-export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec"
 
 export SWI_HOME_DIR="/Users/marjoripomarole/Google\ Drive/USP/2014_01/AI/prolog/"
 
@@ -88,8 +87,6 @@ export AWS_CREDENTIAL_FILE="/Users/marjoripomarole/.aws/config"
 export AWS_ELASTICACHE_HOME="/usr/local/Cellar/aws-elasticache/1.7.000/libexec"
 export AWS_IAM_HOME="/usr/local/opt/aws-iam-tools/jars"
 export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.14.001/libexec" 
-export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
-export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
 
 export EDITOR=vim
 export GIT_EDITOR=vim
