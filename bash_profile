@@ -69,7 +69,7 @@ alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --dat
 # dir shortcuts
 alias api='deactivate; workon atados; cd ~/projects/atados/api'
 alias www=' deactivate; workon atados; cd ~/projects/atados/www'
-alias migration='deactivate; workon atados; cd ~/projects/atados/migration'
+alias dashboard=' deactivate; workon atados; cd ~/projects/atados/dashboard'
 alias gastromotiva='deactivate; cd ~/projects/Gastromotiva/gastromotiva.org'
 alias dotfiles='cd ~/dotfiles'
 alias Downloads='cd ~/Downloads'
@@ -78,7 +78,7 @@ alias wplogs='cd /Applications/MAMP/logs/'
 # Colorize the Terminal
 export CLICOLOR=1;
 
-export JAVA_HOME="$(/usr/libexec/java_home)"
+# export JAVA_HOME="$(/usr/libexec/java_home)"
 
 export SWI_HOME_DIR="/Users/marjoripomarole/Google\ Drive/USP/2014_01/AI/prolog/"
 
