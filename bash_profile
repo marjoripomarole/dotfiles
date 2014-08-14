@@ -78,8 +78,6 @@ alias wplogs='cd /Applications/MAMP/logs/'
 # Colorize the Terminal
 export CLICOLOR=1;
 
-# export JAVA_HOME="$(/usr/libexec/java_home)"
-
 export SWI_HOME_DIR="/Users/marjoripomarole/Google\ Drive/USP/2014_01/AI/prolog/"
 
 export AWS_CREDENTIAL_FILE="/Users/marjoripomarole/.aws/config"

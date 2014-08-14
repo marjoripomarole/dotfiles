@@ -23,6 +23,7 @@ set ruler           " which line am I on?
 set showmatch       " ensure Dyck language
 set incsearch       " incremental searching
 set hlsearch
+set shortmess=I     " Remove Vim welcome message
 
 set backspace=indent,eol,start
 
