@@ -10,6 +10,7 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Random Aliases
+alias sml='rlwrap sml'
 alias tunnel='localtunnel -k ~/.ssh/id_rsa.pub 9000'
 alias v='vim'
 alias gvim='mvim'
@@ -126,3 +127,8 @@ zap () {
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export PATH=/usr/local/bin:$PATH
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+export JDK_HOME=$(/usr/libexec/java_home)
+
+complete -C aws_completer aws
