@@ -1,5 +1,7 @@
 # Made by Marjori Pomarole
 
+source /Users/marjoripomarole/.bash_prompt
+
 export PS1="\u@\h\w$ "
 
 export GITHUBUSERNAME=mpomarole
