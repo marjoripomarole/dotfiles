@@ -1,6 +1,6 @@
 # Made by Marjori Pomarole
 
-source /Users/marjoripomarole/.bash_prompt
+source ~/.bash_prompt
 
 export PS1="\u@\h\w$ "
 
