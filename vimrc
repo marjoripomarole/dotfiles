@@ -32,7 +32,7 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 
-set background=dark
+set background=light
 let g:solarized_termcolors=256
 colorscheme solarized
 
