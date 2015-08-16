@@ -5,6 +5,7 @@ source ~/.bash_prompt
 export PS1="\u@\h\w$ "
 
 export GITHUBUSERNAME=mpomarole
+
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects

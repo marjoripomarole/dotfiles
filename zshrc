@@ -1,3 +1,5 @@
+# Made by Marjori Pomarole
+
 setopt auto_cd        # Change Directory by typing a directory name on its own
 setopt extended_glob  # Turn on the more powerful pattern matching features
 
@@ -43,8 +45,41 @@ alias untar='tar xvf'
 alias pid='ps -el | head -1 && ps -el | grep $1'
 alias prolog='swipl'
 
+# Git land
+alias g=git
+alias gst='git status -b --short'
+alias gd='git diff'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gcam='git add --all; git commit --all -v -m'
+alias gco='git checkout'
+alias gcount='git shortlog -sn'
+alias gcp='git cherry-pick'
+alias gd='git diff'
+alias gdv='git diff -w "$@" | vim -R -'
+alias gl='git pull'
+alias glg='git log --stat --max-count=5'
+alias gp='git push'
+alias gup='git fetch && git rebase'
+alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --date=short' 
+
+# dir shortcuts
+alias api='deactivate; workon atados; cd ~/projects/atados/api'
+alias www=' deactivate; workon atados; cd ~/projects/atados/www'
+alias dotfiles='cd ~/dotfiles'
+alias Downloads='cd ~/Downloads'
+
+# Colorize the Terminal
+export CLICOLOR=1;
+
+export EDITOR=vim
+export GIT_EDITOR=vim
+export VISUAL=vim
+
 # Load the function-based completion systems
 autoload -U compinit
 compinit
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export GITHUBUSERNAME=mpomarole
