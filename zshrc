@@ -1,11 +1,29 @@
 # Made by Marjori Pomarole
 
-setopt auto_cd        # Change Directory by typing a directory name on its own
-setopt extended_glob  # Turn on the more powerful pattern matching features
+setopt auto_cd           # Change Directory by typing a directory name on its own
+setopt extended_glob     # Turn on the more powerful pattern matching features
+setopt append_history    # All shells terminated have a chance to save to ~/.history
+setopt share_history     # Commands saved to ~/.history so they can be shared across shells
+setopt hist_ignore_dups  # Ignore consecutive duplicates
+setopt hist_find_no_dups # Ignore duplicates when searching back
+setopt correct           # autocorrect commands after Return
 
-HISTSIZE=10000
-SAVEHIST=10000
+bindkey "^R" history-incremental-search-backward
+
+HISTSIZE=1000000
+SAVEHIST=1000000
 HISTFILE=~/.history
+
+# Load the function-based completion systems
+autoload -U compinit
+compinit
+
+autoload -U promptinit
+promptinit
+
+prompt walters
+
+export GITHUBUSERNAME=mpomarole
 
 # Aliases
 alias sml='rlwrap sml'
@@ -77,9 +95,3 @@ export CLICOLOR=1;
 export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
-
-# Load the function-based completion systems
-autoload -U compinit
-compinit
-
-export GITHUBUSERNAME=mpomarole
