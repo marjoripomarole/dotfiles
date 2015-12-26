@@ -1,4 +1,4 @@
-# Made by Marjori Pomarole
+# Created by Marjori Pomarole
 
 setopt auto_cd           # Change Directory by typing a directory name on its own
 setopt extended_glob     # Turn on the more powerful pattern matching features
@@ -7,6 +7,7 @@ setopt share_history     # Commands saved to ~/.history so they can be shared ac
 setopt hist_ignore_dups  # Ignore consecutive duplicates
 setopt hist_find_no_dups # Ignore duplicates when searching back
 setopt correct           # autocorrect commands after Return
+setopt numericglobsort   # any range in pattern <-> is sorted
 
 bindkey "^R" history-incremental-search-backward
 
