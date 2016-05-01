@@ -39,8 +39,6 @@ alias unigrep='grep -P "[^\x00-\x7F]"'
 alias nuke='pkill -u $(whoami)'
 alias sb='source ~/.bash_profile'
 alias b='vim ~/.bash_profile'
-alias atadosenv='vim ~/.virtualenvs/atados/bin/activate'
-alias celeryatados='celery -A atados_core worker --loglevel=info'
 alias up='brew update && brew upgrade'
 alias myip='ifconfig |grep inet'
 alias du='du -ch'
@@ -69,13 +67,10 @@ alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --date=short' 
 
 # dir shortcuts
-alias api='deactivate; workon atados; cd ~/projects/atados/api'
-alias www=' deactivate; workon atados; cd ~/projects/atados/www'
-alias dashboard=' deactivate; workon atados; cd ~/projects/atados/dashboard'
-alias gastromotiva='deactivate; cd ~/projects/Gastromotiva/gastromotiva.org'
 alias dotfiles='cd ~/dotfiles'
 alias Downloads='cd ~/Downloads'
 alias wplogs='cd /Applications/MAMP/logs/'
+alias ctf='cd ~/Dropbox\ \(Facebook\)/Various/Cambridge\ CTF\ 2016/facebook-ctf/'
 
 # Colorize the Terminal
 export CLICOLOR=1;
