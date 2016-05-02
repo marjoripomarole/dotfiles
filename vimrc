@@ -48,3 +48,7 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 let g:pep8_map='<leader>8'
 let g:pyflakes_use_quickfix = 0
+
+set nobackup
+set nowritebackup
+set noswapfile
