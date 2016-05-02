@@ -43,12 +43,6 @@ execute pathogen#infect()
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/dist/*,*/bower_components/*,*/node_modules/*,*.pyc,*/static/*,*/storage/*
 
-" Angular syntax in html
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-
-let g:pep8_map='<leader>8'
-let g:pyflakes_use_quickfix = 0
-
 set nobackup
 set nowritebackup
 set noswapfile
