@@ -24,6 +24,7 @@
     type = cat-file -t
     dump = cat-file -p
 	g = grep --break --heading --line-number
+	sl = log --pretty=format:%h%x09%an%x09%ad%x09%s --graph --all --date=short
 [mergetool]
 	keepBackup = true
 [grep]
