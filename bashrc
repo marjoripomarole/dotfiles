@@ -136,3 +136,6 @@ PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export PATH
+
+# added by travis gem
+[ -f /Users/mpomarole/.travis/travis.sh ] && source /Users/mpomarole/.travis/travis.sh
