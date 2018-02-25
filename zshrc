@@ -1,3 +1,27 @@
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/marjori.pomarole/.oh-my-zsh
+
+ZSH_THEME="robbyrussell"
+export UPDATE_ZSH_DAYS=13
+DISABLE_AUTO_TITLE="true"
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+HIST_STAMPS="yyyy-mm-dd"
+
+plugins=(
+  git python vi-mode
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+export LANG=en_US.UTF-8
+
+# ssh
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Personal aliases
 # Created by Marjori Pomarole
 
 setopt auto_cd           # Change Directory by typing a directory name on its own
@@ -22,25 +46,13 @@ compinit
 autoload -U promptinit
 promptinit
 
-prompt walters
+# prompt walters
 
 export GITHUBUSERNAME=mpomarole
 
 # Aliases
-alias sml='rlwrap sml'
 alias tunnel='localtunnel -k ~/.ssh/id_rsa.pub 9000'
 alias v='vim'
-alias gvim='mvim'
-alias g='mvim'
-alias 1='cd -'
-alias 2='cd +2'
-alias 3='cd +3'
-alias 4='cd +4'
-alias 5='cd +5'
-alias 6='cd +6'
-alias 7='cd +7'
-alias 8='cd +8'
-alias 9='cd +9'
 alias _=sudo
 alias afind='ack-grep -il'
 alias ai='sudo apt-get install'
@@ -55,14 +67,11 @@ alias unigrep='grep -P "[^\x00-\x7F]"'
 alias nuke='pkill -u $(whoami)'
 alias sb='source ~/.bash_profile'
 alias b='vim ~/.bash_profile'
-alias atadosenv='vim ~/.virtualenvs/atados/bin/activate'
-alias celeryatados='celery -A atados_core worker --loglevel=info'
 alias up='brew update && brew upgrade'
-alias myip='ifconfig |grep inet'
+alias myip='ifconfig | grep inet'
 alias du='du -ch'
 alias untar='tar xvf'
 alias pid='ps -el | head -1 && ps -el | grep $1'
-alias prolog='swipl'
 
 # Git land
 alias g=git
@@ -85,14 +94,20 @@ alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --date=short' 
 
 # dir shortcuts
-alias api='deactivate; workon atados; cd ~/projects/atados/api'
-alias www=' deactivate; workon atados; cd ~/projects/atados/www'
 alias dotfiles='cd ~/dotfiles'
 alias Downloads='cd ~/Downloads'
-
-# Colorize the Terminal
-export CLICOLOR=1;
 
 export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
+
+export WORKON_HOME=~/Envs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='-p python3.6'
+ 
+source /usr/local/bin/virtualenvwrapper.sh
+export PATH="/usr/local/sbin:$PATH"
+
+# Babylon things
+export SLACK_SHIPCAT_HOOK_URL=''
+export SLACK_SHIPCAT_CHANNEL='#kubernets'
