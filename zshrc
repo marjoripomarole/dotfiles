@@ -119,4 +119,4 @@ export GITHUB_USER=mpomarole
 export GITHUB_PASSWORD=EqCRfgYDGtetf3NZAiQbaGdx
 
 export VAULT_ADDR=https://vault.babylontech.co.uk:8200
-export VAULT_TOKEN=token_from_somewhere
+export VAULT_TOKEN=94d801a9-16ae-9966-266e-0adf58642b16
