@@ -67,11 +67,13 @@ alias unigrep='grep -P "[^\x00-\x7F]"'
 alias nuke='pkill -u $(whoami)'
 alias sb='source ~/.bash_profile'
 alias b='vim ~/.bash_profile'
-alias up='brew update && brew upgrade'
+alias up='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias myip='ifconfig | grep inet'
 alias du='du -ch'
 alias untar='tar xvf'
 alias pid='ps -el | head -1 && ps -el | grep $1'
+alias k='kubectl'
+alias bh='cd ~/bh'
 
 # Git land
 alias g=git
@@ -109,6 +111,12 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='-p python3.6'
 source /usr/local/bin/virtualenvwrapper.sh
 export PATH="/usr/local/sbin:$PATH"
 
-# Babylon things
+# Babylon
 export SLACK_SHIPCAT_HOOK_URL=''
 export SLACK_SHIPCAT_CHANNEL='#kubernets'
+
+export GITHUB_USER=mpomarole
+export GITHUB_PASSWORD=EqCRfgYDGtetf3NZAiQbaGdx
+
+export VAULT_ADDR=https://vault.babylontech.co.uk:8200
+export VAULT_TOKEN=token_from_somewhere
