@@ -3,8 +3,11 @@ syntax on
 " make sure vim uses file-specific indentions
 filetype on
 filetype plugin indent on
+
+" Easy install of plugins for vim
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+execute pathogen#infect()
 
 set nocompatible    " get rid of strict vi compatibility!
 set nu              " line numbering on
@@ -36,9 +39,6 @@ set background=light
 let g:solarized_termcolors=256
 colorscheme solarized
 
-" Easy install of plugins for vim
-execute pathogen#infect()
-
 " Ctrl-p
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/dist/*,*/bower_components/*,*/node_modules/*,*.pyc,*/static/*,*/storage/*
@@ -46,3 +46,14 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/dist/*,*/bower_components/*,*/node_mo
 set nobackup
 set nowritebackup
 set noswapfile
+
+""" Python specific configs
+
+"au BufNewFile,BufRead *.py
+"    \ set tabstop=4
+"    \ set softtabstop=4
+"    \ set shiftwidth=4
+"    \ set textwidth=79
+"    \ set expandtab
+"    \ set autoindent
+"    \ set fileformat=unix
