@@ -3,7 +3,7 @@
 	email = marjori.pomarole@babylonhealth.com
 	user = mpomarole
 [core]
-	excludesfile = /Users/marjoripomarole/.gitignore_global
+	excludesfile = /Users/marjori.pomarole/.global_ignore
 	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"

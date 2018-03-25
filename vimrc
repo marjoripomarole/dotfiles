@@ -47,6 +47,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" autotags
+let g:autotagTagsFile="tags"
+
 """ Python specific configs
 
 "au BufNewFile,BufRead *.py
