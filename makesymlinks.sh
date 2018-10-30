@@ -11,7 +11,7 @@ olddir=~/dotfiles_old             # old dotfiles backup directory
 
 # list of files/folders to symlink in homedir
 # not using oh-my-zhs private scrotwm.conf Xresources
-files="bashrc bash_profile fonts vimrc vim tmux.conf git-completion.bash gitconfig plrc osx bash_prompt zshrc xmodmap"
+files="bashrc bash_profile fonts vimrc vim tmux.conf git-completion.bash gitconfig plrc osx bash_prompt zshrc xmodmap profile"
 
 ##########
 

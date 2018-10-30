@@ -1,7 +1,7 @@
 # Created by Marjori Pomarole
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/marjori.pomarole/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 export UPDATE_ZSH_DAYS=13
@@ -122,6 +122,3 @@ export AWS_SECRET_ACCESS_KEY=uyuxODN4XLO7LBSwqrKE3FT6G3QMsD7KjAy7YUkV
 #export AWS_SECRET_ACCESS_KEY=dYSSscRzVe1g0MrzsIf6nVZDLSwfb2q1g2dlOA6b
 
 export PATH="/usr/local/sbin:$PATH"
-
-# Keyboard Mapping
-xmodmap ~/.xmodmap
