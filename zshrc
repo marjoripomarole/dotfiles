@@ -122,3 +122,6 @@ export AWS_SECRET_ACCESS_KEY=uyuxODN4XLO7LBSwqrKE3FT6G3QMsD7KjAy7YUkV
 #export AWS_SECRET_ACCESS_KEY=dYSSscRzVe1g0MrzsIf6nVZDLSwfb2q1g2dlOA6b
 
 export PATH="/usr/local/sbin:$PATH"
+
+# Keyboard Mapping
+xmodmap ~/.xmodmap

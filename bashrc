@@ -139,3 +139,6 @@ export PATH
 
 # added by travis gem
 [ -f /Users/mpomarole/.travis/travis.sh ] && source /Users/mpomarole/.travis/travis.sh
+
+# Keyboard Mapping
+xmodmap ~/.xmodmap
