@@ -94,31 +94,6 @@ export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
 
-# virtualenv
-export WORKON_HOME=~/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='-p python3.6'
-source /usr/local/bin/virtualenvwrapper.sh
-
 source <(kubectl completion zsh)
-
-# Babylon
-export SLACK_SHIPCAT_HOOK_URL=''
-export SLACK_SHIPCAT_CHANNEL='#kubernets'
-
-export GITHUB_USER=mpomarole
-export GITHUB_PASSWORD=EqCRfgYDGtetf3NZAiQbaGdx
-
-export VAULT_ADDR=https://vault.babylontech.co.uk:8200
-export VAULT_TOKEN=94d801a9-16ae-9966-266e-0adf58642b16
-# export VAULT_TOKEN=8f1875b2-ce50-928f-6cae-ec7d8d2afd5b  new vault token
-
-# root account (dev + staging)
-export AWS_ACCESS_KEY_ID=AKIAJRYLQL5OSXHVHFMA
-export AWS_SECRET_ACCESS_KEY=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
-
-# `development` account (dev-uk, dev-global, qa, preprod)
-#export AWS_ACCESS_KEY_ID=AKIAJSZRIO7RDCCJPLYQ
-#export AWS_SECRET_ACCESS_KEY=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
 
 export PATH="/usr/local/sbin:$PATH"
