@@ -1,9 +1,14 @@
-#!/usr/bin/env bash
+#!/bin/bash
+set -euo pipefail
+set -x
 
 # Install command-line tools using Homebrew.
 
 # Ask for the administrator password upfront.
 sudo -v
+
+# Xcode License acceptance if not done yet
+sudo xcodebuild -license accept
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
@@ -13,11 +18,6 @@ brew update
 
 # Upgrade any already-installed formulae.
 brew upgrade
-
-# Install GNU core utilities (those that come with OS X are outdated).
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-brew install coreutils
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
@@ -34,17 +34,8 @@ brew install bash-completion
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
-# Install RingoJS and Narwhal.
-# Note that the order in which these are installed is important;
-# see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
-
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install bfg
@@ -72,7 +63,6 @@ brew install xz
 
 # Install other useful binaries.
 brew install ack
-#brew install exiv2
 brew install git
 brew install imagemagick --with-webp
 brew install lua
@@ -81,10 +71,15 @@ brew install p7zip
 brew install pigz
 brew install pv
 brew install rename
-brew install rhino
 brew install tree
 brew install webkit2png
 brew install zopfli
+
+brew install tmux
+brew install zsh-syntax-highlighting
+brew install kubectl
+brew install awscli
+brew install jq
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
