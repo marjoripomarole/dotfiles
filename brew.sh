@@ -38,7 +38,6 @@ brew install wget --with-iri
 brew install vim --override-system-vi
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install bfg
 brew install binutils
 brew install binwalk
 brew install cifer
@@ -75,15 +74,15 @@ brew install tree
 brew install webkit2png
 brew install zopfli
 
+# mpomarole's dev related packages
 brew install tmux
 brew install zsh-syntax-highlighting
 brew install kubectl
 brew install awscli
 brew install jq
-
-# Install Node.js. Note: this installs `npm` too, using the recommended
-# installation method.
+brew install sqlite3
 brew install node
+brew cask install minikube
 
 # Remove outdated versions from the cellar.
 brew cleanup
