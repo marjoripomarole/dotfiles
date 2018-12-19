@@ -21,6 +21,8 @@ export LANG=en_US.UTF-8
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+export PATH="/usr/local/sbin:$PATH"
+
 setopt auto_cd           # Change Directory by typing a directory name on its own
 setopt extended_glob     # Turn on the more powerful pattern matching features
 setopt append_history    # All shells terminated have a chance to save to ~/.history
@@ -40,8 +42,7 @@ HISTFILE=~/.history
 autoload -U compinit
 compinit
 
-autoload -U promptinit
-promptinit
+source <(kubectl completion zsh)
 
 # Aliases
 alias tunnel='localtunnel -k ~/.ssh/id_rsa.pub 9000'
@@ -93,7 +94,3 @@ export GITHUBUSERNAME=mpomarole
 export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
-
-source <(kubectl completion zsh)
-
-export PATH="/usr/local/sbin:$PATH"
