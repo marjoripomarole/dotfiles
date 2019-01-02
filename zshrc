@@ -21,7 +21,7 @@ export LANG=en_US.UTF-8
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:$PATH"
 
 setopt auto_cd           # Change Directory by typing a directory name on its own
 setopt extended_glob     # Turn on the more powerful pattern matching features
@@ -88,9 +88,14 @@ alias gl='git pull'
 alias glg='git log --stat --max-count=5'
 alias gp='git push'
 alias gup='git fetch && git rebase'
-alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --all --date=short' 
+alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --date=short' 
 
 export GITHUBUSERNAME=mpomarole
 export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
+
+# LLVM setup
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
