@@ -24,7 +24,7 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+brew install gnu-sed
 # Install Bash 4.
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
@@ -32,10 +32,10 @@ brew install bash
 brew install bash-completion
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
+brew install wget
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
+brew install vim
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install binutils
@@ -63,7 +63,7 @@ brew install xz
 # Install other useful binaries.
 brew install ack
 brew install git
-brew install imagemagick --with-webp
+brew install imagemagick
 brew install lua
 brew install lynx
 brew install p7zip
@@ -75,6 +75,7 @@ brew install webkit2png
 brew install zopfli
 
 # mpomarole's dev related packages
+brew install mosh
 brew install tmux
 brew install zsh-syntax-highlighting
 brew install kubectl
