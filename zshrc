@@ -42,7 +42,7 @@ HISTFILE=~/.history
 autoload -U compinit
 compinit
 
-source <(kubectl completion zsh)
+# source <(kubectl completion zsh)
 
 # Aliases
 alias tunnel='localtunnel -k ~/.ssh/id_rsa.pub 9000'
@@ -67,7 +67,6 @@ alias myip='ifconfig | grep inet'
 alias du='du -ch'
 alias untar='tar xvf'
 alias pid='ps -el | head -1 && ps -el | grep $1'
-alias k='kubectl'
 alias bh='cd ~/bh'
 alias all='ls | xargs -P10 -I{} git -C {} pull'
 alias python='python3'
@@ -99,3 +98,4 @@ export VISUAL=vim
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/llvm/lib"
 export CPPFLAGS="-I/usr/local/opt/llvm/include"
+export PATH="/usr/local/opt/node@12/bin:$PATH"
