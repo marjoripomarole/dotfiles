@@ -109,3 +109,13 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/mpomarole/projects/HelpingHands/helping-hands-development-c30b6ce5e6d8.json"
+# export GOOGLE_APPLICATION_CREDENTIALS="/Users/mpomarole/projects/HelpingHands/helping-hands-community-c5fd0efab269.json"
+export LOCIZE_API_KEY="60e171c1-964b-41b7-87e8-8cd6c87f3623"
+export LOCIZE_PROJECT_ID="38c97c08-850c-4707-94b0-37015b180cd9"
