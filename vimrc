@@ -5,8 +5,6 @@ filetype on
 filetype plugin indent on
 
 " Easy install of plugins for vim
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
 execute pathogen#infect()
 
 set nocompatible    " get rid of strict vi compatibility!
