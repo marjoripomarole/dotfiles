@@ -46,7 +46,7 @@ compinit
 
 # Aliases
 alias tunnel='localtunnel -k ~/.ssh/id_rsa.pub 9000'
-alias v='vim'
+alias vim='nvim'
 alias _=sudo
 alias afind='ack-grep -il'
 alias ai='sudo apt-get install'
@@ -60,7 +60,7 @@ alias grep='grep --color=auto'
 alias unigrep='grep -P "[^\x00-\x7F]"'
 alias nuke='pkill -u $(whoami)'
 alias sb='source ~/.bash_profile'
-alias b='vim ~/.bash_profile'
+alias sz='source ~/.zshrc'
 alias up='brew update; brew upgrade; brew doctor'
 alias upclean='brew prune; brew cleanup; brew doctor'
 alias myip='ifconfig | grep inet'
@@ -120,3 +120,6 @@ export GOOGLE_APPLICATION_CREDENTIALS="/Users/mpomarole/projects/HelpingHands/he
 # export GOOGLE_APPLICATION_CREDENTIALS="/Users/mpomarole/projects/HelpingHands/helping-hands-community-c5fd0efab269.json"
 export LOCIZE_API_KEY="60e171c1-964b-41b7-87e8-8cd6c87f3623"
 export LOCIZE_PROJECT_ID="38c97c08-850c-4707-94b0-37015b180cd9"
+
+# encoding directories
+# mkdir ALL ; find . -name '*.mov' -exec ln -s $PWD/{} ./ALL \;

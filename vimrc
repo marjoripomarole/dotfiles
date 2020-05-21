@@ -4,9 +4,6 @@ syntax on
 filetype on
 filetype plugin indent on
 
-" Easy install of plugins for vim
-execute pathogen#infect()
-
 set nocompatible    " get rid of strict vi compatibility!
 set nu              " line numbering on
 set autoindent      " autoindent on
@@ -37,10 +34,6 @@ set background=light
 let g:solarized_termcolors=256
 colorscheme solarized
 
-" Ctrl-p
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/dist/*,*/bower_components/*,*/node_modules/*,*.pyc,*/static/*,*/storage/*
-
 set nobackup
 set nowritebackup
 set noswapfile
@@ -48,13 +41,23 @@ set noswapfile
 " autotags
 let g:autotagTagsFile="tags"
 
-""" Python specific configs
+" vim-plug
 
-"au BufNewFile,BufRead *.py
-"    \ set tabstop=4
-"    \ set softtabstop=4
-"    \ set shiftwidth=4
-"    \ set textwidth=79
-"    \ set expandtab
-"    \ set autoindent
-"    \ set fileformat=unix
+call plug#begin('~/.vim/plugged')
+
+Plug 'dense-analysis/ale'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'preservim/nerdtree'
+
+call plug#end()
+
+let g:ale_fixers = {
+ \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+ \ 'javascript': ['eslint'],
+ \ }
+
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+
+let g:ale_fix_on_save = 1
