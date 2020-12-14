@@ -3,7 +3,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="sunrise"
 export UPDATE_ZSH_DAYS=13
 DISABLE_AUTO_TITLE="true"
 ENABLE_CORRECTION="true"
@@ -42,8 +42,6 @@ HISTFILE=~/.history
 autoload -U compinit
 compinit
 
-# source <(kubectl completion zsh)
-
 # Aliases
 alias tunnel='localtunnel -k ~/.ssh/id_rsa.pub 9000'
 alias vim='nvim'
@@ -70,6 +68,7 @@ alias pid='ps -el | head -1 && ps -el | grep $1'
 alias bh='cd ~/bh'
 alias all='ls | xargs -P10 -I{} git -C {} pull'
 alias python='python3'
+alias pip=pip3
 
 alias g=git
 alias gst='git status -b --short'
@@ -87,27 +86,23 @@ alias gl='git pull'
 alias glg='git log --stat --max-count=5'
 alias gp='git push'
 alias gup='git fetch && git rebase'
-alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --date=short' 
+alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --date=short'
 
 export GITHUBUSERNAME=mpomarole
 export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
 
-# LLVM setup
+# LLVM
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/llvm/lib"
 export CPPFLAGS="-I/usr/local/opt/llvm/include"
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 
+# Android
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-# avdmanager, sdkmanager
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
-
-# adb, logcat
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
-
-# emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 
 # nvm
@@ -115,11 +110,17 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# Helping Hands Community
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/mpomarole/projects/HelpingHands/helping-hands-development-c30b6ce5e6d8.json"
-# export GOOGLE_APPLICATION_CREDENTIALS="/Users/mpomarole/projects/HelpingHands/helping-hands-community-c5fd0efab269.json"
-export LOCIZE_API_KEY="60e171c1-964b-41b7-87e8-8cd6c87f3623"
-export LOCIZE_PROJECT_ID="38c97c08-850c-4707-94b0-37015b180cd9"
-
-# encoding directories
-# mkdir ALL ; find . -name '*.mov' -exec ln -s $PWD/{} ./ALL \;
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/mpomarole/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/mpomarole/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/mpomarole/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/mpomarole/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
