@@ -54,6 +54,7 @@ alias cd....='cd ../../..'
 alias cd.....='cd ../../../..'
 alias d='dirs -v'
 alias ll='ls -alsh'
+alias all='ls | xargs -P10 -I{} git -C {} pull'
 alias grep='grep --color=auto'
 alias unigrep='grep -P "[^\x00-\x7F]"'
 alias nuke='pkill -u $(whoami)'
@@ -66,7 +67,7 @@ alias du='du -ch'
 alias untar='tar xvf'
 alias pid='ps -el | head -1 && ps -el | grep $1'
 alias bh='cd ~/bh'
-alias all='ls | xargs -P10 -I{} git -C {} pull'
+
 alias python='python3'
 alias pip=pip3
 
@@ -92,35 +93,3 @@ export GITHUBUSERNAME=mpomarole
 export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
-
-# LLVM
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/llvm/lib"
-export CPPFLAGS="-I/usr/local/opt/llvm/include"
-export PATH="/usr/local/opt/node@12/bin:$PATH"
-
-# Android
-export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
-export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/mpomarole/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/mpomarole/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/mpomarole/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/mpomarole/opt/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
