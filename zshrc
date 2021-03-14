@@ -89,7 +89,33 @@ alias gp='git push'
 alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --date=short'
 
+# ChatClass's code search
+alias cs='ghs code -tr chatclass/main_hub'
+
 export GITHUBUSERNAME=mpomarole
 export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+function movToGif() {
+    if [ -n "$1" ]
+    then
+        ffmpeg -i "$1" -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
+    else
+        cat "Needs to pass .mov file as argument."
+    fi
+}
