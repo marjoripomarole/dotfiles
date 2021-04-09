@@ -25,19 +25,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" vim-plug
-
-call plug#begin('~/.vim/plugged')
-
-Plug 'dense-analysis/ale'
-Plug 'iCyMind/NeoSolarized'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'preservim/nerdtree'
-Plug 'kien/ctrlp.vim'
-
-call plug#end()
-
 let g:ale_fixers = {
  \ '*': ['remove_trailing_lines', 'trim_whitespace'],
  \ 'javascript': ['eslint'],
