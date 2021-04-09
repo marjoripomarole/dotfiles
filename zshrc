@@ -105,3 +105,5 @@ function movToGif() {
         cat "Needs to pass .mov file as argument."
     fi
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
