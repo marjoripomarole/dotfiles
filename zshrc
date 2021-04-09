@@ -10,7 +10,7 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git python vi-mode zsh-syntax-highlighting)
+plugins=(git python vi-mode zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
