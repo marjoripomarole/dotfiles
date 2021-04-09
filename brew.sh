@@ -83,7 +83,10 @@ brew install awscli
 brew install jq
 brew install sqlite3
 brew install node
-brew cask install minikube
+brew install --cask minikube
+
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
 
 # Remove outdated versions from the cellar.
 brew cleanup
