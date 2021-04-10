@@ -40,14 +40,18 @@ HISTFILE=~/.history
 autoload -U compinit
 compinit
 
+# colorls
+export PATH="$HOME/.gem/bin:$PATH"
+export GEM_HOME="$HOME/.gem"
+source $(dirname $(gem which colorls))/tab_complete.sh
+
 # Aliases
-alias tunnel='localtunnel -k ~/.ssh/id_rsa.pub 9000'
 alias vim='nvim'
-alias ll='ls -alsh'
+alias ls='colorls'
+alias ll='colorls -lA --sd'
+#alias ll='ls -alsh'
 alias grep='grep --color=auto'
 alias nuke='pkill -u $(whoami)'
-alias up='brew update; brew upgrade; brew doctor'
-alias upclean='brew prune; brew cleanup; brew doctor'
 alias myip='ifconfig | grep inet'
 alias du='du -ch'
 alias untar='tar xvf'
