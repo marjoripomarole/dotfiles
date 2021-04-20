@@ -10,7 +10,7 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(aws dotenv git python vi-mode zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git python vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -57,6 +57,7 @@ alias du='du -ch'
 alias untar='tar xvf'
 alias pid='ps -el | head -1 && ps -el | grep $1'
 alias bh='cd ~/bh'
+alias ctags="`brew --prefix`/bin/ctags"
 
 alias python='python3'
 alias pip=pip3

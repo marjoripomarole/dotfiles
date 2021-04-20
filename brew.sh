@@ -75,18 +75,20 @@ brew install webkit2png
 brew install zopfli
 
 # mpomarole's dev related packages
-brew install mosh
-brew install tmux
-brew install zsh-syntax-highlighting
-brew install kubectl
 brew install awscli
 brew install jq
-brew install sqlite3
+brew install kubectl
+brew install mosh
 brew install node
+brew install sqlite3
+brew install tmux
+brew install zsh-syntax-highlighting
 brew install --cask minikube
 
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
+
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 # Remove outdated versions from the cellar.
 brew cleanup
