@@ -1,0 +1,45 @@
+# Main Colors
+unrecognized_file: black
+recognized_file:   black
+executable_file:   red
+dir:               dodgerblue
+
+# Link
+dead_link: red
+link:      cyan
+
+# special files
+socket:    green
+blockdev:  green
+chardev:   green
+
+# Access Modes
+write:     darkkhaki
+read:      black
+exec:      red
+no_access: indianred
+
+# Age
+day_old:     black
+hour_old:    black
+no_modifier: black
+
+# File Size
+file_large:  black
+file_medium: black
+file_small:  black
+
+# Random
+report: gray
+user:   black
+tree:   cyan
+empty:  black
+error:  red
+normal: darkkhaki
+
+# Git
+addition:     chartreuse
+modification: darkkhaki
+deletion:     darkred
+untracked:    darkorange
+unchanged:    forestgreen
