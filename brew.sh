@@ -8,9 +8,9 @@ set -x
 sudo -v
 
 # Xcode License acceptance if not done yet
-code-select --install # Install Command Line Tools if you haven't already.
+xcode-select --install || true
 sudo xcode-select --switch /Library/Developer/CommandLineTools # Enable command line tools
-sudo xcodebuild -license accept
+sudo xcodebuild -license accept || true
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
@@ -55,9 +55,8 @@ brew install nmap
 brew install pngcheck
 brew install socat
 brew install sqlmap
-brew install tcpflow
-brew install tcpreplay
-brew install tcptrace
+# brew install tcpflow
+# brew install tcptrace
 brew install ucspi-tcp # `tcpserver` etc.
 brew install xpdf
 brew install xz
@@ -77,6 +76,7 @@ brew install webkit2png
 brew install zopfli
 
 # mpomarole's dev related packages
+brew install gh
 brew install awscli
 brew install jq
 brew install kubectl
@@ -85,7 +85,6 @@ brew install node
 brew install sqlite3
 brew install tmux
 brew install zsh-syntax-highlighting
-brew install --cask minikube
 
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
