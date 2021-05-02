@@ -8,6 +8,8 @@ set -x
 sudo -v
 
 # Xcode License acceptance if not done yet
+code-select --install # Install Command Line Tools if you haven't already.
+sudo xcode-select --switch /Library/Developer/CommandLineTools # Enable command line tools
 sudo xcodebuild -license accept
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished.
