@@ -91,5 +91,12 @@ brew install --cask font-hack-nerd-font
 
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+
+brew tap teamookla/speedtest
+brew update
+brew install speedtest --force
+
 # Remove outdated versions from the cellar.
 brew cleanup
