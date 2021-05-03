@@ -112,3 +112,4 @@ function movToGif() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/opt/homebrew/bin:$PATH"
