@@ -95,8 +95,10 @@ brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
 
 brew tap teamookla/speedtest
-brew update
 brew install speedtest --force
+
+brew tap weaveworks/tap
+brew install weaveworks/tap/eksctl
 
 # Remove outdated versions from the cellar.
 brew cleanup

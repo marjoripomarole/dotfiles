@@ -36,6 +36,8 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 HISTFILE=~/.history
 
+fpath+=~/.zfunc
+
 # Load the function-based completion systems
 autoload -U compinit
 compinit
@@ -59,9 +61,6 @@ alias pid='ps -el | head -1 && ps -el | grep $1'
 alias bh='cd ~/bh'
 alias ctags="`brew --prefix`/bin/ctags"
 
-alias python='python3'
-alias pip=pip3
-
 alias g=git
 alias gst='git status -b --short'
 alias gd='git diff'
@@ -80,8 +79,8 @@ alias gp='git push'
 alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --date=short'
 
-# ChatClass's code search
-alias cs='ghs code -tr chatclass/main_hub'
+source <(eksctl completion zsh)
+source <(helm completion zsh)
 
 export GITHUBUSERNAME=mpomarole
 export EDITOR=vim
@@ -94,6 +93,8 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+
+# export PATH="/Users/marjoripomarole/Library/Python/3.9/bin:$PATH"
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -113,3 +114,5 @@ function movToGif() {
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/opt/homebrew/bin:$PATH"
+
+export PATH="$HOME/.poetry/bin:$PATH"
