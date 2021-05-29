@@ -80,6 +80,7 @@ brew install gh
 brew install awscli
 brew install jq
 brew install kubectl
+brew install helm
 brew install mosh
 brew install node
 brew install sqlite3
