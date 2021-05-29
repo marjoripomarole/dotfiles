@@ -14,7 +14,9 @@ plugins=(git python vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -48,7 +50,6 @@ export GEM_HOME="$HOME/.gem"
 source $(dirname $(gem which colorls))/tab_complete.sh
 
 # Aliases
-alias vim='nvim'
 alias ls='colorls'
 alias ll='colorls -lA --sd'
 #alias ll='ls -alsh'
@@ -60,6 +61,7 @@ alias untar='tar xvf'
 alias pid='ps -el | head -1 && ps -el | grep $1'
 alias bh='cd ~/bh'
 alias ctags="`brew --prefix`/bin/ctags"
+alias python='python3'
 
 alias g=git
 alias gst='git status -b --short'
@@ -93,8 +95,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
-
-# export PATH="/Users/marjoripomarole/Library/Python/3.9/bin:$PATH"
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
