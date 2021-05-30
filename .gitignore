@@ -1,5 +1,7 @@
-vim/.netrwhist
-
+config/configstore
 config/gh/hosts.yml
 config/yarn
-config/configstore
+
+tags
+
+vim/.netrwhist
