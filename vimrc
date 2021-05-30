@@ -44,6 +44,4 @@ Plug 'preservim/NERDTree'
 Plug 'vim-syntastic/syntastic'
 call plug#end()
 
-set termguicolors
-set background=light
 colorscheme NeoSolarized
