@@ -21,6 +21,10 @@ export LANGUAGE=en_US.UTF-8
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# PATH
+export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/istio-1.10.0/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:$PATH"
 
 setopt auto_cd           # Change Directory by typing a directory name on its own
@@ -60,8 +64,8 @@ alias du='du -ch'
 alias untar='tar xvf'
 alias pid='ps -el | head -1 && ps -el | grep $1'
 alias bh='cd ~/bh'
-alias ctags="`brew --prefix`/bin/ctags"
 alias python='python3'
+alias k='kubectl'
 
 alias g=git
 alias gst='git status -b --short'
@@ -92,10 +96,6 @@ export VISUAL=vim
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export CPPFLAGS="-I/usr/local/opt/openjdk/include"
-
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
@@ -111,8 +111,3 @@ function movToGif() {
         cat "Needs to pass .mov file as argument."
     fi
 }
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/opt/homebrew/bin:$PATH"
-
-export PATH="$HOME/.poetry/bin:$PATH"
