@@ -3,7 +3,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="sunrise"
+ZSH_THEME="tonotdo"
 export UPDATE_ZSH_DAYS=13
 DISABLE_AUTO_TITLE="true"
 ENABLE_CORRECTION="true"
