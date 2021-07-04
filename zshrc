@@ -85,9 +85,6 @@ alias gp='git push'
 alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --date=short'
 
-source <(eksctl completion zsh)
-source <(helm completion zsh)
-
 export GITHUBUSERNAME=mpomarole
 export EDITOR=vim
 export GIT_EDITOR=vim
