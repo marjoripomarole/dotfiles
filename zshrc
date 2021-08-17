@@ -48,7 +48,6 @@ fpath+=~/.zfunc
 autoload -U compinit
 compinit
 
-
 # Aliases
 
 alias ll='ls -alsh'
@@ -93,16 +92,6 @@ export GITHUBUSERNAME=mpomarole
 export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
-
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
 
 function movToGif() {
     if [ -n "$1" ]
