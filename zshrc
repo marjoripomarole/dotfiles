@@ -23,7 +23,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # PATH
 export PATH="$HOME/.poetry/bin:$PATH"
-export PATH="$HOME/istio-1.10.0/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:$PATH"
 
