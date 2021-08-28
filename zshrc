@@ -100,3 +100,5 @@ function movToGif() {
         cat "Needs to pass .mov file as argument."
     fi
 }
+
+eval "$(direnv hook zsh)"
