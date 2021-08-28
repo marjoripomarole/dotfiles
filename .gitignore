@@ -1,8 +1,0 @@
-config/configstore
-config/gh/hosts.yml
-config/yarn
-config/gcloud
-
-tags
-
-vim/.netrwhist

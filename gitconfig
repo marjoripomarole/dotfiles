@@ -3,7 +3,7 @@
 	email = marjoripomarole@gmail.com
 	user = mpomarole
 [core]
-	excludesfile = /Users/marjori.pomarole/.global_ignore
+	excludesfile = /Users/mpomarole/.gitignore
 	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
