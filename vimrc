@@ -25,16 +25,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-let g:ale_fixers = {
- \ '*': ['remove_trailing_lines', 'trim_whitespace'],
- \ 'javascript': ['eslint'],
- \ }
-
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '⚠️'
-
-let g:ale_fix_on_save = 1
-
 call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dense-analysis/ale'
@@ -45,3 +35,16 @@ Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 colorscheme NeoSolarized
+
+let g:ale_fixers = {
+ \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+ \ 'javascript': ['eslint'],
+ \ }
+
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+
+let g:ale_fix_on_save = 1
+
+let g:syntastic_python_checkers = ['python']
+let g:syntastic_python_python_exec = 'python3'
