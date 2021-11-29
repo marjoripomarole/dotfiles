@@ -82,6 +82,7 @@ brew install node
 brew install sqlite3
 brew install tmux
 brew install zsh-syntax-highlighting
+brew install direnv
 
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
