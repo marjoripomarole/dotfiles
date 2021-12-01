@@ -67,6 +67,7 @@ alias untar='tar xvf'
 alias pid='ps -el | head -1 && ps -el | grep $1'
 alias bh='cd ~/bh'
 alias python='python3'
+alias pip='pip3'
 alias k='kubectl'
 
 alias g=git
