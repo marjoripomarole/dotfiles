@@ -55,6 +55,7 @@ brew install sqlmap
 brew install ucspi-tcp # `tcpserver` etc.
 brew install xpdf
 brew install xz
+brew install postgresql
 
 # Install other useful binaries.
 brew install ack

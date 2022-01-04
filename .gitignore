@@ -28,6 +28,7 @@ config/configstore
 config/gh/hosts.yml
 config/yarn
 config/gcloud
+config/StardewValley
 
 # vim
 vim/.netrwhist

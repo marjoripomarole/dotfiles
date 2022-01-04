@@ -22,9 +22,9 @@ export LANGUAGE=en_US.UTF-8
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # PATH
-export PATH="$HOME/.poetry/bin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:$PATH"
+# export PATH="$HOME/.poetry/bin:$PATH"
+# export PATH="/opt/homebrew/bin:$PATH"
+# export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:$PATH"
 
 setopt auto_cd           # Change Directory by typing a directory name on its own
 setopt extended_glob     # Turn on the more powerful pattern matching features
@@ -47,12 +47,15 @@ fpath+=~/.zfunc
 autoload -U compinit
 compinit
 
+autoload -U bashcompinit
+bashcompinit
+
 # Aliases
 
 alias ll='ls -alsh'
 # colorls if on mac
 if [ "$(uname 2> /dev/null)" != "Linux" ]; then
-      export PATH="$HOME/.gem/bin:$PATH"
+      # export PATH="$HOME/.gem/bin:$PATH"
       export GEM_HOME="$HOME/.gem"
       source $(dirname $(gem which colorls))/tab_complete.sh
       alias ls='colorls'
@@ -103,6 +106,17 @@ function movToGif() {
 }
 
 eval "$(direnv hook zsh)"
+eval "$(register-python-argcomplete pipx)"
+eval "$(rbenv init - zsh)"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/marjoripomarole/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/marjoripomarole/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/marjoripomarole/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/marjoripomarole/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Created by `pipx` on 2021-12-15 19:12:27
+# export PATH="$PATH:/Users/marjoripomarole/.local/bin"
