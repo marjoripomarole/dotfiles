@@ -48,16 +48,6 @@ bashcompinit
 # Aliases
 
 alias ll='ls -alsh'
-
-# colorls if on mac
-if [ "$(uname 2> /dev/null)" != "Linux" ]; then
-      export PATH="$HOME/.gem/bin:$PATH"
-      export GEM_HOME="$HOME/.gem"
-      source $(dirname $(gem which colorls))/tab_complete.sh
-      alias ls='colorls'
-      alias ll='colorls -lA --sd'
-fi
-
 alias grep='grep --color=auto'
 alias nuke='pkill -u $(whoami)'
 alias myip='ifconfig | grep inet'
