@@ -22,9 +22,10 @@ export LANGUAGE=en_US.UTF-8
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # PATH
-# export PATH="$HOME/.poetry/bin:$PATH"
-# export PATH="/opt/homebrew/bin:$PATH"
-# export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:$PATH"
 
 setopt auto_cd           # Change Directory by typing a directory name on its own
 setopt extended_glob     # Turn on the more powerful pattern matching features
@@ -55,7 +56,7 @@ bashcompinit
 alias ll='ls -alsh'
 # colorls if on mac
 if [ "$(uname 2> /dev/null)" != "Linux" ]; then
-      # export PATH="$HOME/.gem/bin:$PATH"
+      export PATH="$HOME/.gem/bin:$PATH"
       export GEM_HOME="$HOME/.gem"
       source $(dirname $(gem which colorls))/tab_complete.sh
       alias ls='colorls'
@@ -119,4 +120,4 @@ if [ -f '/Users/marjoripomarole/google-cloud-sdk/path.zsh.inc' ]; then . '/Users
 if [ -f '/Users/marjoripomarole/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/marjoripomarole/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Created by `pipx` on 2021-12-15 19:12:27
-# export PATH="$PATH:/Users/marjoripomarole/.local/bin"
+export PATH="$PATH:/Users/marjoripomarole/.local/bin"
