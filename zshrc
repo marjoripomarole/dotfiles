@@ -55,9 +55,9 @@ alias du='du -ch'
 alias untar='tar xvf'
 alias pid='ps -el | head -1 && ps -el | grep $1'
 alias bh='cd ~/bh'
-alias python='python3'
 alias pip='pip3'
 alias k='kubectl'
+alias python='python3'
 
 alias g=git
 alias gst='git status -b --short'
@@ -76,6 +76,10 @@ alias glg='git log --stat --max-count=5'
 alias gp='git push'
 alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --date=short'
+alias make='nocorrect make'
+
+# For Rosetta apps TEMPORARY
+alias brew='arch -x86_64 /usr/local/Homebrew/bin/brew'
 
 export GITHUBUSERNAME=mpomarole
 export EDITOR=vim
