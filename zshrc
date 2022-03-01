@@ -4,10 +4,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="tonotdo"
-export UPDATE_ZSH_DAYS=13
-DISABLE_AUTO_TITLE="true"
-ENABLE_CORRECTION="true"
-COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(git python vi-mode)
@@ -27,8 +23,8 @@ setopt append_history    # All shells terminated have a chance to save to ~/.his
 setopt share_history     # Commands saved to ~/.history so they can be shared across shells
 setopt hist_ignore_dups  # Ignore consecutive duplicates
 setopt hist_find_no_dups # Ignore duplicates when searching back
-setopt correct           # autocorrect commands after Return
 setopt numericglobsort   # any range in pattern <-> is sorted
+unsetopt correct_all
 
 bindkey "^R" history-incremental-search-backward
 
@@ -76,7 +72,6 @@ alias glg='git log --stat --max-count=5'
 alias gp='git push'
 alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --date=short'
-alias make='nocorrect make'
 
 # For Rosetta apps TEMPORARY
 alias brew='arch -x86_64 /usr/local/Homebrew/bin/brew'
