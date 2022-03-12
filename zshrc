@@ -74,7 +74,7 @@ alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --date=short'
 
 # For Rosetta apps TEMPORARY
-alias brew='arch -x86_64 /usr/local/Homebrew/bin/brew'
+alias brew86='arch -x86_64 /usr/local/Homebrew/bin/brew'
 
 export GITHUBUSERNAME=mpomarole
 export EDITOR=vim
