@@ -28,6 +28,7 @@ set noswapfile
 call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dense-analysis/ale'
+Plug 'leafgarland/typescript-vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'overcache/NeoSolarized'
 Plug 'preservim/NERDTree'
