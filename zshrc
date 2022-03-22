@@ -80,3 +80,6 @@ export GITHUBUSERNAME=mpomarole
 export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
+
+eval "$(pyenv init -)"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1

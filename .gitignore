@@ -28,7 +28,7 @@ config/configstore
 config/gh/hosts.yml
 config/yarn
 config/gcloud
-config/StardewValley
+config/argocd
 
 # vim
 vim/.netrwhist
