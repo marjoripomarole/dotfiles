@@ -29,7 +29,7 @@ call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dense-analysis/ale'
 Plug 'leafgarland/typescript-vim'
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 Plug 'overcache/NeoSolarized'
 Plug 'preservim/NERDTree'
 Plug 'vim-syntastic/syntastic'
@@ -49,3 +49,5 @@ let g:ale_fix_on_save = 1
 
 let g:syntastic_python_checkers = ['python']
 let g:syntastic_python_python_exec = 'python3'
+
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\.egg-info$']

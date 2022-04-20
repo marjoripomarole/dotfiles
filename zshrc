@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="tonotdo"
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git python vi-mode)
+plugins=(git python vi-mode pyenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -81,5 +81,15 @@ export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
 
+export DAGSTER_HOME=~/dagster_home
+
+export ARCHFLAGS="-arch arm64"
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
+
 eval "$(pyenv init -)"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+eval "$(pyenv virtualenv-init -)"
+
+eval "$(direnv hook zsh)"
