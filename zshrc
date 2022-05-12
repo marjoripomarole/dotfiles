@@ -75,6 +75,24 @@ alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --date=shor
 
 # For Rosetta apps TEMPORARY
 alias brew86='arch -x86_64 /usr/local/Homebrew/bin/brew'
+alias brewr='arch -x86_64 /usr/local/bin/brew $@'
+
+arch_name="$(uname -m)"
+
+if [ "${arch_name}" = "x86_64" ]; then
+   echo "Running in x86 mode"
+   eval $(/usr/local/bin/brew shellenv)
+elif [ "${arch_name}" = "arm64" ]; then
+   echo "Running in Arm mode"
+   eval $(/opt/homebrew/bin/brew shellenv)
+   export ARCHFLAGS="-arch arm64"
+else
+   echo "Unexpected uname -m result ${arch_name}"
+fi
+
+# brew libraries
+export LDFLAGS="-L $(brew --prefix openssl)/lib"
+export CFLAGS="-I $(brew --prefix openssl)/include"
 
 export GITHUBUSERNAME=mpomarole
 export EDITOR=vim
@@ -83,13 +101,11 @@ export VISUAL=vim
 
 export DAGSTER_HOME=~/dagster_home
 
-export ARCHFLAGS="-arch arm64"
-
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
 
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
 eval "$(direnv hook zsh)"
