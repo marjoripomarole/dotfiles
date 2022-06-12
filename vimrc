@@ -33,6 +33,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'overcache/NeoSolarized'
 Plug 'preservim/NERDTree'
 Plug 'vim-syntastic/syntastic'
+Plug 'nvie/vim-flake8'
 call plug#end()
 
 colorscheme NeoSolarized
