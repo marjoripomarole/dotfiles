@@ -94,7 +94,8 @@ fi
 export LDFLAGS="-L $(brew --prefix openssl)/lib"
 export CFLAGS="-I $(brew --prefix openssl)/include"
 
-export GITHUBUSERNAME=mpomarole
+export USER=marjoripomarole
+export GITHUBUSERNAME=marjoripomarole
 export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
@@ -109,3 +110,8 @@ eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
 eval "$(direnv hook zsh)"
+
+# pnpm
+export PNPM_HOME="/Users/marjoripomarole/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
