@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="tonotdo"
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git python vi-mode pyenv)
+plugins=(git python vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -51,10 +51,7 @@ alias du='du -ch'
 alias untar='tar xvf'
 alias pid='ps -el | head -1 && ps -el | grep $1'
 alias bh='cd ~/bh'
-alias pip='pip3'
 alias k='kubectl'
-alias python='python3'
-
 alias g=git
 alias gst='git status -b --short'
 alias gd='git diff'
@@ -72,10 +69,6 @@ alias glg='git log --stat --max-count=5'
 alias gp='git push'
 alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --date=short'
-
-# For Rosetta apps TEMPORARY
-alias brew86='arch -x86_64 /usr/local/Homebrew/bin/brew'
-alias brewr='arch -x86_64 /usr/local/bin/brew $@'
 
 arch_name="$(uname -m)"
 
@@ -101,17 +94,3 @@ export GIT_EDITOR=vim
 export VISUAL=vim
 
 export DAGSTER_HOME=~/dagster_home
-
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
-
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
-
-eval "$(direnv hook zsh)"
-
-# pnpm
-export PNPM_HOME="/Users/marjoripomarole/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
