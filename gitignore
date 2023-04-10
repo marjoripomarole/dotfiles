@@ -23,13 +23,5 @@ node_modules
 .sass-cache
 tags
 
-# config
-config/Google
-config/configstore
-config/gcloud
-config/gh/hosts.yml
-config/op
-config/yarn
-
 # vim
 vim/.netrwhist
