@@ -24,11 +24,13 @@ node_modules
 tags
 
 # config
-config/configstore
-config/gh/hosts.yml
-config/yarn
-config/gcloud
+config/Google
 config/argocd
+config/configstore
+config/gcloud
+config/gh/hosts.yml
+config/op
+config/yarn
 
 # vim
 vim/.netrwhist
