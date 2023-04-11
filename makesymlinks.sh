@@ -12,7 +12,7 @@ olddir=~/dotfiles_old             # old dotfiles backup directory
 # list of files/folders to symlink in homedir
 # not using oh-my-zhs private scrotwm.conf Xresources
 
-files="vimrc vim tmux.conf git_template git-completion.bash gitconfig gitignore zshrc config"
+files="vimrc vim tmux.conf git_template git-completion.bash gitconfig gitignore zshrc zprofile config"
 
 case "$(uname -s)" in
     Darwin*)   files="${files} osx xmodmap";;
