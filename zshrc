@@ -34,12 +34,11 @@ HISTFILE=~/.history
 
 fpath+=~/.zfunc
 
-# Load the function-based completion systems
-autoload -U compinit
-compinit
-
+autoload -Uz compinit && compinit
 autoload -U bashcompinit
 bashcompinit
+
+# eval "$(direnv hook zsh)"
 
 # Aliases
 
@@ -69,19 +68,8 @@ alias glg='git log --stat --max-count=5'
 alias gp='git push'
 alias gup='git fetch && git rebase'
 alias glol='git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --graph --date=short'
-
-arch_name="$(uname -m)"
-
-if [ "${arch_name}" = "x86_64" ]; then
-   echo "Running in x86 mode"
-   eval $(/usr/local/bin/brew shellenv)
-elif [ "${arch_name}" = "arm64" ]; then
-   echo "Running in Arm mode"
-   eval $(/opt/homebrew/bin/brew shellenv)
-   export ARCHFLAGS="-arch arm64"
-else
-   echo "Unexpected uname -m result ${arch_name}"
-fi
+alias pip="pip3"
+alias python="python3"
 
 # brew libraries
 export LDFLAGS="-L $(brew --prefix openssl)/lib"
@@ -94,3 +82,6 @@ export GIT_EDITOR=vim
 export VISUAL=vim
 
 export DAGSTER_HOME=~/dagster_home
+
+# poetry
+export PATH="/Users/marjoripomarole/.local/bin:$PATH"
