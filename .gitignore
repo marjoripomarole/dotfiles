@@ -31,6 +31,8 @@ config/gcloud
 config/gh/hosts.yml
 config/op
 config/yarn
+config/StardewValley
+config/exercism
 
 # vim
 vim/.netrwhist

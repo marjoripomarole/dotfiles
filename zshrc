@@ -38,8 +38,6 @@ autoload -Uz compinit && compinit
 autoload -U bashcompinit
 bashcompinit
 
-# eval "$(direnv hook zsh)"
-
 # Aliases
 
 alias ll='ls -alsh'
@@ -80,8 +78,6 @@ export GITHUBUSERNAME=marjoripomarole
 export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
-
-export DAGSTER_HOME=~/dagster_home
 
 # poetry
 export PATH="/Users/marjoripomarole/.local/bin:$PATH"

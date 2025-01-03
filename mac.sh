@@ -33,6 +33,7 @@ brew install wget
 
 # Install more recent versions of some OS X tools.
 brew install vim
+brew install nvim
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install binutils
