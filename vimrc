@@ -2,7 +2,7 @@ syntax enable
 filetype plugin indent on
 
 set nu              " line numbering on
-set relativenumber  
+set relativenumber
 set autoindent      " autoindent on
 set smartindent
 set cindent
@@ -30,17 +30,14 @@ set nowritebackup
 set noswapfile
 
 call plug#begin()
-" Plug 'ludovicchabant/vim-gutentags'
-" Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'dense-analysis/ale'
-" Plug 'elixir-editors/vim-elixir'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'mhinz/vim-mix-format'
-" Plug 'nvie/vim-flake8'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dense-analysis/ale'
+Plug 'elixir-editors/vim-elixir'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'overcache/NeoSolarized'
 Plug 'preservim/NERDTree'
-Plug 'vim-syntastic/syntastic'
 Plug 'rust-lang/rust.vim'
+Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 colorscheme NeoSolarized
