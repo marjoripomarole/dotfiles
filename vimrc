@@ -38,6 +38,7 @@ Plug 'overcache/NeoSolarized'
 Plug 'preservim/NERDTree'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-syntastic/syntastic'
+Plug 'ziglang/zig.vim'
 call plug#end()
 
 colorscheme NeoSolarized
