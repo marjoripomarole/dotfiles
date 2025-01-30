@@ -34,5 +34,4 @@ config/yarn
 config/StardewValley
 config/exercism
 
-# vim
-vim/.netrwhist
+.tmp.driveupload
