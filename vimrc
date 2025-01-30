@@ -31,7 +31,6 @@ set noswapfile
 
 call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'dense-analysis/ale'
 Plug 'elixir-editors/vim-elixir'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'overcache/NeoSolarized'
